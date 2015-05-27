@@ -8,8 +8,6 @@
 
 #pragma mark - // NOTES (Public) //
 
-#warning TO DO – Add support for setting NSArray of items, make generic
-
 #pragma mark - // IMPORTS (Public) //
 
 #import <UIKit/UIKit.h>
@@ -21,4 +19,5 @@
 @interface AlertTableViewController : UIAlertController
 @property (nonatomic, strong) id <UITableViewDataSource> dataSource;
 @property (nonatomic, strong) id <UITableViewDelegate> delegate;
+@property (nonatomic, strong) UITableView *tableView;
 @end
