@@ -17,7 +17,5 @@
 #pragma mark - // DEFINITIONS (Public) //
 
 @interface AlertTableViewController : UIAlertController
-@property (nonatomic, strong) id <UITableViewDataSource> dataSource;
-@property (nonatomic, strong) id <UITableViewDelegate> delegate;
 @property (nonatomic, strong) UITableView *tableView;
 @end

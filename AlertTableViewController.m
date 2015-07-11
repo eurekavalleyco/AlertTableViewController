@@ -25,26 +25,8 @@
 
 #pragma mark - // SETTERS AND GETTERS //
 
-@synthesize dataSource = _dataSource;
-@synthesize delegate = _delegate;
 @synthesize tableView = _tableView;
 @synthesize tableViewController = _tableViewController;
-
-- (void)setDataSource:(id <UITableViewDataSource>)dataSource
-{
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetter customCategories:nil message:nil];
-    
-    _dataSource = dataSource;
-    [self.tableView setDataSource:dataSource];
-}
-
-- (void)setDelegate:(id <UITableViewDelegate>)delegate
-{
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetter customCategories:nil message:nil];
-    
-    _delegate = delegate;
-    [self.tableView setDelegate:delegate];
-}
 
 - (UITableView *)tableView
 {
@@ -116,14 +98,6 @@
     CGRect rect = CGRectMake(self.tableView.contentInset.left, self.tableView.contentInset.top, self.tableView.frame.size.width, 1.0);
     [self.tableView scrollRectToVisible:rect animated:NO];
     [super viewDidDisappear:animated];
-}
-
-- (void)viewDidUnload
-{
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategories:@[AKD_UI] message:nil];
-    
-    [self teardown];
-    [super viewDidUnload];
 }
 
 - (void)dealloc
